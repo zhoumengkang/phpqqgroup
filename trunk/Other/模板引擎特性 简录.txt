@@ -1,0 +1,98 @@
+注释
+	TL:
+		Hello!{* MoXie *}!
+	Text:
+		Hello!!
+	Ps:
+		单行注释与多行注释相同
+普通变量
+	Java:
+	        tpl.assgin("str","name");
+		tpl.assgin("int",2);
+		tpl.assgin("bool",true);
+	TL:
+		{$str},{$int},{$bool}
+	Text:
+		 name,2,true
+--------------------------------------------------------------------------------
+对象访问
+	Java:
+		Person person = new Person();
+		person.setName("MoXie");
+		tpl.assgin("person",person); 
+	TL:
+		{$person.getName()},
+		{$person.getName().length()}
+	Text:
+		MoXie, 5
+--------------------------------------------------------------------------------
+块访问
+	Java:
+            public class myBlock{
+                public static void block(BlurMap params,String content,ZoeeyTpl smarty){
+                        content += params.get("name").getString();
+                }
+            }
+        Config:
+                <classMap>org.**.myBlock</classMap>
+                <tagName regAs="block">getName</tagName>
+	TL:
+                {assign var="name" value="MoXie"}
+		{getName name=$name name=$name+"."}
+                    {$name}
+                    Name:
+                {/getName}
+        Text:
+                MoXie
+                Name:MoXie.
+--------------------------------------------------------------------------------
+函数访问
+	Java:
+            public class myFunc{
+                public static String func(BlurMap params,ZoeeyTpl tpl){
+                    return Base64.encode(params.get("str").getBytes("utf-8"))
+                }
+            }
+        Config:
+                <classMap>org.**.myFunc</classMap>
+                <tagName regAs="func">getName</tagName>
+	TL:
+		Base64:{getBase64 str="I'm a string:)"}
+        Text:
+                Base64:SSdtIGEgc3RyaW5nOik=
+--------------------------------------------------------------------------------
+修饰器
+    Java:
+        
+           public class myModifier{
+                public static String modifier(BlurMap params,Object obj,ZoeeyTpl tpl){
+                    return Base64.encode(String.valueOf(obj) + params.get("suffix").getString())
+                }
+            }
+        Config:
+                <classMap>org.**.myModifier</classMap>
+                <tagName regAs="modifier">toBase64</tagName>
+	TL:
+                {assign var="name" value="MoXie"}
+		Base64 A:{getBase64|toBase64}
+		Base64 B:{getBase64|toBase64 suffix=" haha!"}
+        Text:
+                Base64 A:TW9YaWU=
+                Base64 B:TW9YaWUgaGFoYSE=
+--------------------------------------------------------------------------------
+默认变量处理
+    {assign var="title" value=$title|default:"no title"}
+    {$title}
+
+宏录制      capture
+数组遍历    foreach,foreachelse 可处理 Collection，Map，Iterator，Enumeration
+模板引入    include_tpl
+文本引入    include_txt
+非缓存引入  insert 
+逻辑块      if,elseif,else 
+左右定界符  ldelim,rdelim 
+源意输出    literal 
+Java源写入  java 
+遍历数组    section,sectionelse 
+去除首尾空格和回车   strip
+

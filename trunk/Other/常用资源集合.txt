@@ -1,0 +1,59 @@
+[Php]
+官方：http://cn2.php.net/manual/zh/
+PHP手册之整合最新评论CHM版 
+讨论：http://bbs.chinaunix.net/thread-999247-1-1.html
+下载：http://smarttemplate.yi.org/phpdocs/php_manual_zh.docs.chm
+ 
+[Smarty]
+官方：http://www.smarty.net/manual/en/
+Smarty中文手册
+下载：http://www.phpchina.com/manual/smarty/Smarty-2.6.14.tar.gz
+
+[Zend Framework]
+官方：http://framework.zend.com/manual/en/
+中文：http://www.zend-framework-manual.cn/
+下载：http://framework.zend.com/download/documentation?version=1.6.0RC1
+
+[CakePhp]
+官方：http://book.cakephp.org/
+CakePHP英文chm手册
+下载：http://www.phpchina.com/viewthread_14592.html (需要登录)
+
+[Rapid-framework]
+http://code.google.com/p/rapid-framework/
+
+[Design Pattern]
+PHP设计模式
+讨论： http://www.phpchina.com/bbs/viewthread.php?tid=4994
+下载：http://www.phpchina.cn/zenddown/guide_to_php_design_pattern_zh.chm
+	 http://www.phpchina.cn/zenddown/guide_to_php_design_pattern_zh.pdf
+
+[JavaScript]
+讨论： http://www.javaeye.com/topic/131332
+手册在讨论贴楼下。
+
+[jQuery]
+官方： http://docs.jquery.com/Main_Page
+
+[Velocity]
+下载： http://click.sourceforge.net/docs/velocity/VelocityUsersGuide.pdf
+
+[PowerDesigner]
+官方： http://downloads.sybase.com/nav/detail.do?docset=1408
+php.xol 在群共享里
+
+[Enterprise Architect]
+官方：http://www.sparxsystems.com.au/EAUserGuide/index.html
+
+
+[其他常用网址]
+sf.net
+dzone.com
+gotapi.com
+hotscripts.com
+sitepoint.com
+infoq.com
+phpriot.com
+phpdeveloper.org
+google.com/codesearch
+http://www-128.ibm.com/developerworks/cn/web/
